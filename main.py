@@ -5,11 +5,11 @@ def menu():
     while True:
         print("Menu: Read(R), Inventory(I), Exit(E)")
         x = input("Type: ")
-        if x == "Read" or x == "R":
+        if x.lower() == "read" or x.lower() == "r":
             Read()
-        elif x == "Inventory" or x == "I":
+        elif x.lower() == "inventory" or x.lower() == "i":
             inventory_menu()
-        elif x == "Exit" or x == "E":
+        elif x.lower() == "exit" or x.lower() == "e":
             break
         else:
             print("[ERROR] INCORRECT")
@@ -18,16 +18,16 @@ def inventory_menu():
     while True:
         print("Menu: List(L), Add(A), Back(B)")
         x = input("Type: ")
-        if x == "List" or x == "L":
+        if x.lower() == "list" or x.lower() == "l":
             check_inventory_list()
-        elif x == "Add" or x == "A":
+        elif x.lower() == "add" or x.lower() == "a":
             print("Add item")
             JAN = input("JAN: ")
             NAME = input("NAME: ")
             PRICE = input("PRICE: ")
             STOCK_QUANTITY = input("STOCK QUANTITY: ")
             add_inventory_item(JAN, NAME, PRICE, STOCK_QUANTITY)
-        elif x == "Back" or x == "B":
+        elif x.lower() == "back" or x.lower() == "b":
             break
         else:
             print("[ERROR] INCORRECT")
