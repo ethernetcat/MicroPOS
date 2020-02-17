@@ -22,7 +22,6 @@ def Read():
     for i in range(len(Read_list)):
         for j in range(len(Item_list)):
             if Read_list[i] == Item_list[j][0]:
-                print("商品名", Item_list[j][1], "価格", round(int(Item_list[j][2])*1.10), "（", round(int(Item_list[j][2])*0.10), "）")
                 SUM += round(int(Item_list[j][2])*1.10)
 
     print("####################")
