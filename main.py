@@ -1,4 +1,3 @@
-from Read import *
 from BarcodeReading import *
 
 def main():
@@ -6,7 +5,7 @@ def main():
         print("Menu: Read(R), Check(C), Exit(E)")
         x = input("Type: ")
         if x == "Read" or x == "R":
-            Read(get_items_csv())
+            Read()
         elif x == "Check" or x == "C":
             print("Check")
         elif x == "Exit" or x == "E":
