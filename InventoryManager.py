@@ -14,4 +14,10 @@ def check_inventory_list():
     Item_list = get_items_csv()
     for i in range(len(Item_list)):
         print("JAN: {0:<13}, Price: {1}, Remaining: {2}".format(Item_list[i][0], Item_list[i][2], Item_list[i][3]))
-
+
+def add_inventory_item(JAN, Name, Price, Stock_Quantity):
+    Item_list = get_items_csv()
+    Item_list.append([JAN, Name, Price, Stock_Quantity])
+    with open("items.csv", "w", encoding="utf_8") as file:
+        writer = csv.writer(file, lineterminator="\n")
+        writer.writerows(Item_list)
