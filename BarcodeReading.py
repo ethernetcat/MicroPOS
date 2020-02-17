@@ -14,7 +14,7 @@ def Read():
             Read_list.append(barcode)
             for i in range(len(Item_list)):
                 if barcode == Item_list[i][0]:
-                    print("# 商品名", Item_list[i][1], "価格", round(int(Item_list[i][2])*1.10), "（", round(int(Item_list[i][2])*0.10), "）")
+                    print("NAME: {0}, PRICE: {1}(In-TAX:{2})".format(Item_list[i][1], round(int(Item_list[i][2])*1.10), round(int(Item_list[i][2])*0.10)))
         else:
             break
         i += 1
