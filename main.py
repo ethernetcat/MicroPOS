@@ -1,14 +1,17 @@
 from BarcodeReading import *
 from InventoryManager import check_inventory_list
+from History import check_purchased_history
 
 def menu():
     while True:
-        print("Menu: Read(R), Inventory(I), Exit(E)")
+        print("Menu: Read(R), Inventory(I), Purchasing Infomation(P), Exit(E)")
         x = input("Type: ")
         if x.lower() == "read" or x.lower() == "r":
             Read()
         elif x.lower() == "inventory" or x.lower() == "i":
             inventory_menu()
+        elif x.lower() == "purchasing" or x.lower() == "p":
+            purchased_menu()
         elif x.lower() == "exit" or x.lower() == "e":
             break
         else:
@@ -27,6 +30,17 @@ def inventory_menu():
             PRICE = input("PRICE: ")
             STOCK_QUANTITY = input("STOCK QUANTITY: ")
             add_inventory_item(JAN, NAME, PRICE, STOCK_QUANTITY)
+        elif x.lower() == "back" or x.lower() == "b":
+            break
+        else:
+            print("[ERROR] INCORRECT")
+
+def purchased_menu():
+    while True:
+        print("Menu: List(L), Back(B)")
+        x = input("Type: ")
+        if x.lower() == "list" or x.lower() == "l":
+            check_purchased_history()
         elif x.lower() == "back" or x.lower() == "b":
             break
         else:
