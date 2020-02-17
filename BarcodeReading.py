@@ -24,8 +24,6 @@ def Read():
             if Read_list[i] == Item_list[j][0]:
                 SUM += round(int(Item_list[j][2])*1.10)
 
-    print("####################")
-    print("合計金額", str(SUM))
-    print("####################")
+    print("Total Fee", str(SUM))
 
     update_inventory(Read_list)
